@@ -1,0 +1,37 @@
+.custom-input {
+  position: relative;
+  max-height: 48px;
+  padding: 12px 0px;
+  border-radius: 5px;
+  max-width: 416px;
+  background-color: $light;
+
+  &:focus-within {
+    border: 1px solid $primary-color;
+  }
+
+  input {
+    width: 80%;
+    height: 100%;
+    padding: 1px 1px 1px 56px;
+    border: none !important;
+    background-color: transparent;
+    font-size: 16px;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 21px;
+    transform: translateY(-50%);
+    width: 25px;
+  }
+
+  input:focus {
+    border: 2px solid $primary-color;
+  }
+
+  input:focus-visible {
+    outline: none;
+  }
+}

@@ -1,0 +1,99 @@
+/* CustomDropdown.scss */
+
+.custom-dropdown {
+  .select-btn {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    font-weight: 400;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    gap: 8px;
+
+    img {
+      width: 42px;
+      height: 42px;
+    }
+
+    svg {
+      font-size: 1rem;
+    }
+  }
+
+  .options {
+    position: absolute;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 4px 42px 0px rgba(79, 114, 205, 0.15);
+    opacity: 0;
+    transform: translateY(-10px);
+    width: 360px;
+    z-index: 200;
+
+    &.active {
+      transition: opacity 0.3s, transform 0.3s;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .option {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    cursor: pointer;
+    justify-content: space-between;
+    &:hover {
+      background: $light;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    input[type="radio"] {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid $primary-color;
+      border-radius: 50%;
+      position: relative;
+      margin-right: 10px;
+    }
+
+    input[type="radio"]:checked::before {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: $primary-color;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .label-block {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .count-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid $light-gray;
+      padding: 2px 8px;
+    }
+  }
+}

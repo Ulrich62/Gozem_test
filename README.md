@@ -7,8 +7,6 @@ This project is a simple React app that use the Gozem API to display the list of
 To install the project, you need to clone the repository and install the dependencies.
 
 ```bash
-git clone git@gitlab.com:Ulrich62/gozem_test.git
-cd gozem_test
 npm install
 ```
 
